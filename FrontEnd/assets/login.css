@@ -1,0 +1,102 @@
+/* login page */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f7f3;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    margin:auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    font-size: 18px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #a86a3d;
+}
+
+.logo span {
+    font-size: 14px;
+    color: #777;
+}
+
+.logo__company-name {
+  font-family: "Syne", sans-serif;
+  /* TODO size and color */
+}
+nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: black;
+}
+
+nav .active {
+    font-weight: bold;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+}
+
+.login-container {
+    width:400px;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #2f4f43;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    align-self: flex-start;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #2f4f43;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.forgot-password {
+    display: block;
+    margin-top: 15px;
+    text-decoration: none;
+    color: #333;
+}
+
+footer {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    color: #888;
+}
