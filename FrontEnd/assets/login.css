@@ -1,102 +1,128 @@
 /* login page */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f9f7f3;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-    margin:auto;
+  background-color: #f9f7f3;
+  text-align: center;
+  max-width: 1140px;
+  margin: auto;
+  font-family: "Work Sans", sans-serif;
+  font-size: 14px;
 }
 
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
 }
 
 .logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: #a86a3d;
+  font-size: 24px;
+  font-weight: bold;
+  color: #a86a3d;
 }
 
-.logo span {
-    font-size: 14px;
-    color: #777;
+h1 {
+  display: flex;
+  flex-direction: column;
+  font-family: "Syne";
+  font-size: 22px;
+  font-weight: 800;
+  color: #b1663c;
+  cursor: pointer;
 }
 
-.logo__company-name {
-  font-family: "Syne", sans-serif;
-  /* TODO size and color */
-}
-nav a {
-    margin: 0 10px;
-    text-decoration: none;
-    color: black;
+h1 > span {
+  text-align: left;
+  font-family: "Work Sans";
+  font-size: 10px;
+  letter-spacing: 0.1em;
 }
 
-nav .active {
-    font-weight: bold;
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  font-family: "work sans", sans-serif;
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+}
+
+.login {
+  font-weight: bold;
+}
+
+.menu__instagram-icon {
+  width: 22px;
 }
 
 main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
 }
 
 .login-container {
-    width:400px;
+  width: 400px;
 }
 
 h2 {
-    margin-bottom: 20px;
-    color: #2f4f43;
+  margin-bottom: 20px;
+  color: #2f4f43;
+  font-family: "Syne";
+  font-weight: 700;
+  font-size: 30px;
 }
 
 form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 label {
-    align-self: flex-start;
-    margin-bottom: 5px;
-    color: #555;
+  align-self: flex-start;
+  margin-bottom: 5px;
+  color: #555;
 }
 
 input {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
 }
 
 button {
-    background-color: #2f4f43;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+  background-color: #2f4f43;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 60px;
+  cursor: pointer;
+  width: 126px;
+  height: 35px;
+  font-family: "Syne", sans-serif;
 }
 
 .forgot-password {
-    display: block;
-    margin-top: 15px;
-    text-decoration: none;
-    color: #333;
+  display: block;
+  margin-top: 15px;
+  color: #333;
 }
 
 footer {
-    position: absolute;
-    bottom: 10px;
-    width: 100%;
-    text-align: center;
-    color: #888;
+  display: flex;
+  justify-content: flex-end;
+  color: #888;
+  margin: 2em;
 }

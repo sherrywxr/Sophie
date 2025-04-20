@@ -3,23 +3,13 @@ document.addEventListener("DOMContentLoaded", function () {
   const loginForm = document.getElementById("login-form");
   if (loginForm) {
     loginForm.addEventListener("submit", async function (event) {
-      console.log("hello")
+      console.log("hello");
       event.preventDefault();
       const email = document.getElementById("email").value;
       const password = document.getElementById("password").value;
       authenticateUser(email, password);
     });
   }
-  // TODO clickevent listner for the button
-  
-  // Logout button handling
-  // const logoutBtn = document.getElementById("logout-btn");
-  // if (logoutBtn) {
-  //   logoutBtn.addEventListener("click", () => {
-  //     localStorage.removeItem("authToken");
-  //     window.location.reload();
-  //   });
-  // }
 });
 // AUTHENTICATE USER
 async function authenticateUser(email, password) {
@@ -35,7 +25,7 @@ async function authenticateUser(email, password) {
     const data = await response.json();
     if (response.ok) {
       localStorage.setItem("authToken", data.token);
-      window.location.href = "/"; // Redirect to homepage
+      window.location.href = "index.html"; // Redirect to homepage
     } else {
       alert("Invalid username or password");
     }
@@ -43,3 +33,7 @@ async function authenticateUser(email, password) {
     console.error("Error logging in:", error);
   }
 }
+//click logo redirect to home page
+document.getElementById("logo").addEventListener("click", function () {
+  window.location.href = "index.html"; // Replace with your homepage URL
+});
