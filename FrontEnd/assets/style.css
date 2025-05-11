@@ -129,6 +129,13 @@ table {
 }
 
 /** end reset css**/
+.desinger-intro {
+  font-family:"Work Sans";
+  color:#3D3D3D;
+  size: 14px;
+  width: 404px;
+}
+
 .edit-mode {
   display: block;
   background-color: black;
@@ -551,6 +558,7 @@ input {
   margin-bottom: 20px;
   color: #b3b3b3;
 }
+
 .confirm-btn {
   width: 237px;
   height: 44px;
@@ -561,6 +569,11 @@ input {
   color: white;
   border: none;
   border-radius: 60px;
+  cursor: not-allowed;
+}
+
+.confirm-btn.active {
+  background-color: #1D6154;
   cursor: pointer;
 }
 

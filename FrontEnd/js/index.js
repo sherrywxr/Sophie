@@ -161,7 +161,6 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-
 //Change login url li to logout after login
 document.addEventListener("DOMContentLoaded", function () {
   updateAuthLink(); // Call function to update login/logout link
@@ -235,7 +234,6 @@ document.addEventListener("DOMContentLoaded", function () {
       jobCard.innerHTML = `<img class="job-thumbnail" src="${job.imageUrl}" alt="${job.title}">`;
       jobThumbnails.appendChild(jobCard);
     });
-   
   }
   // Close when clicking the close button
   closeButton.addEventListener("click", function () {
@@ -251,7 +249,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Example "Add a photo" clickbox
 
-  // const thumbnails = document.querySelectorAll(".job-thumbnail");
 
   const addPhotoBtn = document.getElementById("addPhotoBtn");
   addPhotoBtn.addEventListener("click", () => {
@@ -301,8 +298,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Close when clicking the close button
   closeButton.addEventListener("click", function () {
     popupBox.classList.add("hidden");
-    popupAddPhoto.classList.add("hidden");
-    console.log(document.querySelector(".close-button"));
+    // popupAddPhoto.classList.add("hidden");
   });
 });
 
@@ -311,6 +307,24 @@ const confirmBtn = document.getElementById("confirm");
 const fileInput = document.getElementById("fileInput");
 const titleInput = document.querySelector(".title-enter input");
 const categorySelect = document.querySelector(".category-select");
+
+//check the form completetion and active the confirm button
+function checkFormCompletion() {
+  if (
+    fileInput.files.length > 0 &&
+    titleInput.value.trim() !== "" &&
+    categorySelect.value !== ""
+  ) {
+    confirmBtn.disabled = false;
+    confirmBtn.classList.add("active");
+  } else {
+    confirmBtn.disabled = true;
+    confirmBtn.classList.remove("active");
+  }
+}
+fileInput.addEventListener("change", checkFormCompletion);
+titleInput.addEventListener("input", checkFormCompletion);
+categorySelect.addEventListener("change", checkFormCompletion);
 
 confirmBtn.addEventListener("click", async () => {
   const file = fileInput.files[0];
@@ -336,7 +350,7 @@ confirmBtn.addEventListener("click", async () => {
       body: formData,
     });
     const data = await response.json();
-console.log(data)
+    console.log(data);
     if (!response.ok) throw new Error("Upload failed");
 
     alert("Photo uploaded successfully!");
@@ -346,7 +360,7 @@ console.log(data)
     titleInput.value = "";
     categorySelect.selectedIndex = 0;
 
-    jobCache.push(data)
+    jobCache.push(data);
     displayJobs(jobCache);
   } catch (error) {
     console.error("Upload error:", error);
