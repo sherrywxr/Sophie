@@ -340,13 +340,12 @@ console.log(data)
     if (!response.ok) throw new Error("Upload failed");
 
     alert("Photo uploaded successfully!");
-    popupAddPhoto.classList.add("hidden");
-    popupBox.classList.remove("hidden");
+    // popupAddPhoto.classList.add("hidden");
+    // popupBox.classList.remove("hidden");
     fileInput.value = "";
     titleInput.value = "";
     categorySelect.selectedIndex = 0;
 
-    // TODO: Refresh gallery here
     jobCache.push(data)
     displayJobs(jobCache);
   } catch (error) {
