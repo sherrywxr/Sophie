@@ -14,11 +14,6 @@
   <script defer src="./js/index.js"></script>
 </head>
 
-<div id="edit-mode" class="edit-mode hidden">
-  <img class="edit-icon" src="./assets/icons/edit-icon-white.png" alt="" />
-  <span class="edit-mode-text">Editing Mode </span>
-</div>
-
 <body>
   <div id="edit-mode" class="edit-mode hidden">
     <img class="edit-icon" src="./assets/icons/edit-icon-white.png" alt="" />
@@ -60,7 +55,7 @@
       </article>
     </section>
     <section id="portfolio">
-      <h2 calss="portfolio-title">
+      <h2 class="portfolio-title">
         My Projects
         <button id="edit-button" class="portfolio-title__edit-button hidden">
           <img class="edit-icon-black" src="./assets/icons/edit-icon.png" alt="" /> <span
@@ -68,27 +63,41 @@
       </h2>
 
       <section id="popupBox" class="popup hidden">
-        <div class="popup-content">
+        <div class="popup-content" id="popup-content">
           <span class="close-button">&times;</span>
           <h2>Photo Gallery</h2>
           <div id="job-thumbnails" class="job-thumbnails">
             <!-- <button class="trashicon"><img class="trashicon" src="./assets/icons/trashicon.png" alt="" /></button> -->
-            <button id="addPhotoBtn">Add a Photo</button>
+
           </div>
+          <hr class="hl1">
+          <button id="addPhotoBtn" class="add-photo-button">Add a photo</button>
         </div>
-        <div class="popup-addphoto" id="popupAddPhoto">
+        <div class="popup-addphoto hidden" id="popupAddPhoto">
+          <button class="back-btn"><img class="back-btn" src="./assets/icons/arrow-left.png" alt="" /></button>
+          <span id="add-photo-close-button" class="close-button">&times;</span>
           <div class="photo">
-            <h2>Add photo</h2>
-            <img class="addphotopic" src="./assets/icons/addphotopicture.png" alt="" />
-            <label class="upload-section" for="fileInput">
-              <div><button class="addphotobutton"> + Add photo</button><br><small>jpg, png: max 4 MB</small></div>
-            </label>
-            <input type="file" id="fileInput" accept="image/png, image/jpeg" />
-            <input type="text" placeholder="Title" />
-            <select>
-              <option>Category</option>
-            </select>
-            <button class="confirm-btn">Confirm</button>
+            <h2 class="add-photo-word">Add photo</h2>
+            <div class="blue-box">
+              <img id="addphotopic" class="addphotopic" src="./assets/icons/addphotopicture.png" alt="" />
+              <img id="preview" class="preview" src="#" alt="Image Preview" style="display:none; max-width: 300px;" />
+              <!-- <label class="upload-section" for="fileInput"> -->
+              <div class="upload-section">
+                <!-- <button class="addphotobutton"> + Add photo</button> -->
+                <label id="addphotobutton" class="addphotobutton" for="fileInput"> + Add photo</label>
+                <h3 class="jpg-word">jpg, png: max 4 MB</h3>
+              </div>
+              <!-- </label> -->
+              <input class="hidden" type="file" id="fileInput" accept="image/png, image/jpeg" />
+            </div>
+
+            <div class="title-enter">Title<input type="text" /></div>
+            <div>Category
+              <select class="category-select">
+              </select>
+              <hr class="hl2">
+              <button id="confirm" class="confirm-btn">Confirm</button>
+            </div>
           </div>
         </div>
       </section>
@@ -97,83 +106,6 @@
         <div id="filter" class="category-filters"></div>
       </div>
       <div class="gallery">
-        <!-- <figure>
-            <img
-              src="assets/images/abajour-tahina.png"
-              alt="Tahina Lampshade"
-            />
-            <figcaption>Tahina Lampshade</figcaption>
-          </figure>
-          <figure>
-            <img
-              src="assets/images/appartement-paris-v.png"
-              alt="Paris V Appartment"
-            />
-            <figcaption>Paris V Appartment</figcaption>
-          </figure>
-          <figure>
-            <img
-              src="assets/images/restaurant-sushisen-londres.png"
-              alt="Sushisen Restaurant - London"
-            />
-            <figcaption>Sushisen Restaurant - London</figcaption>
-          </figure>
-          <figure>
-            <img
-              src="assets/images/la-balisiere.png"
-              alt="La Balisière” Villa – Port-Louis"
-            />
-            <figcaption>“La Balisière” Villa – Port-Louis</figcaption>
-          </figure>
-          <figure>
-            <img
-              src="assets/images/structures-thermopolis.png"
-              alt="Thermopolis Structures"
-            />
-            <figcaption>Thermopolis Structures</figcaption>
-          </figure>
-          <figure>
-            <img
-              src="assets/images/appartement-paris-x.png"
-              alt="Paris X Appartment"
-            />
-            <figcaption>Paris X Appartment</figcaption>
-          </figure>
-          <figure>
-            <img
-              src="assets/images/le-coteau-cassis.png"
-              alt="Le Coteau” Pavillon - Cassis"
-            />
-            <figcaption>“Le Coteau” Pavillon - Cassis</figcaption>
-          </figure>
-          <figure>
-            <img
-              src="assets/images/villa-ferneze.png"
-              alt="Ferneze Villa - Elba"
-            />
-            <figcaption>Ferneze Villa - Elba</figcaption>
-          </figure>
-          <figure>
-            <img
-              src="assets/images/appartement-paris-xviii.png"
-              alt="Paris XVIII Appartment"
-            />
-            <figcaption>Paris XVIII Appartment</figcaption>
-          </figure>
-          <figure>
-            <img
-              src="assets/images/bar-lullaby-paris.png"
-              alt="Lullaby” Bar - Paris"
-            />
-            <figcaption>“Lullaby” Bar - Paris</figcaption>
-          </figure>
-          <figure>
-            <img
-              src="assets/images/hotel-first-arte-new-delhi.png"
-              alt="Hotel First Arte - New Delhi"
-            />
-            <figcaption>First Arte Hotel - New Delhi</figcaption>
-          </figure> -->
       </div>
     </section>
     <section id="contact">

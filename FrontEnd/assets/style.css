@@ -139,14 +139,16 @@ table {
 
 .hidden {
   display: none;
+  transform: scale(0);
 }
+
 .edit-icon {
   width: 15.58px;
   margin-top: 21px;
 }
 
 .edit-mode-text {
-  font: "Work Sans";
+  font-family: "Work Sans";
   font-size: 16px;
   margin-left: 8px;
   font-weight: 400;
@@ -344,6 +346,7 @@ footer nav ul {
 }
 
 /* pop-up */
+
 .popup {
   position: fixed;
   top: 0;
@@ -361,11 +364,13 @@ footer nav ul {
   background: white;
   padding: 100px;
   border-radius: 8px;
-  max-width: 630px;
+  width: 430px;
   /* text-align: center; */
   /* display: flex;
   justify-content: center; */
   position: absolute;
+  display: flex;
+  flex-direction: column;
   top: 20%;
   margin: auto;
   left: calc(50% - 630px / 2);
@@ -404,61 +409,164 @@ footer nav ul {
   position: relative;
 }
 
+.hl1 {
+  width: 420px;
+  margin-top: 50px;
+  margin-bottom: 30px;
+  color: #b3b3b3;
+}
+.add-photo-button {
+  width: 193px;
+  margin: auto;
+  background-color: #1d6154;
+  border-radius: 60px;
+  color: white;
+  padding: 8px;
+  border: none;
+}
 /* addphoto popup*/
 .popup-addphoto {
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(0, 0, 0, 0.4);
-  display: none;
-  align-items: center;
-  justify-content: center;
-  z-index: 1000;
+  background: white;
+  padding: 100px;
+  border-radius: 8px;
+  width: 430px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 20%;
+  margin: auto;
+  left: calc(50% - 630px / 2);
 }
 
+.back-btn {
+  width: 21px;
+  border: none;
+  background-color: transparent;
+  position: absolute;
+  top: 10px;
+  left: 15px;
+}
+
+.blue-box {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 169px;
+}
+.add-photo-word {
+  font-family: "Work Sans";
+  font-size: 26px;
+  margin-top: -50px;
+  font-weight: 400;
+}
 .photo {
   background: white;
   border-radius: 10px;
-  padding: 20px 30px;
   width: 400px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  /* box-shadow: 0 5px 15px rgba(0,0,0,0.2); */
   position: relative;
 }
 
 .photo h2 {
-  text-align: center;
-  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  font-family: "Work Sans";
+  font-weight: 400;
+  font-size: 26px;
+  color: black;
 }
 
+.blue-box {
+  display: flex;
+  flex-direction: column;
+  width: 420px;
+  height: 169px;
+  background-color: #e8f1f6;
+}
+
+.addphotopic {
+  width: 76px;
+  display: block;
+  margin: auto;
+  padding-top: 10px;
+}
 
 .upload-section {
   text-align: center;
-  background: #f2f4f7;
-  padding: 30px;
+  margin-top: -5px;
+  padding: 25px;
   border-radius: 10px;
-  margin-bottom: 20px;
   cursor: pointer;
 }
 
-.upload-section input[type="file"] {
+/* .upload-section input[type="file"] {
   display: none;
+} */
+
+.addphotobutton {
+  background: #b9c5cc;
+  border: none;
+  width: 173px;
+  height: 42px;
+  border-radius: 50px;
+  color: #14443b;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 35px;
+  padding-right: 35px;
 }
 
-input, select {
+.jpg-word {
+  font-family: "Work Sans";
+  font-size: 9px;
+  margin-top: 15px;
+  font-weight: 400;
+  color: #444444;
+}
+
+input {
   width: 100%;
   padding: 10px;
   margin-bottom: 15px;
   border: 1px solid #ddd;
   border-radius: 5px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
-
+.title-enter {
+  padding-top: 20px;
+}
+.category-select {
+  width: 422px;
+  padding: 10px;
+  margin-top: 3px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.hl2 {
+  width: 420px;
+  margin-bottom: 20px;
+  color: #b3b3b3;
+}
 .confirm-btn {
+  width: 237px;
+  height: 44px;
   display: block;
-  margin: 0 auto;
-  padding: 10px 30px;
+  margin: auto;
   background: #999;
+  font-family: "Syne";
   color: white;
   border: none;
-  border-radius: 20px;
+  border-radius: 60px;
   cursor: pointer;
+}
+
+.preview {
+  height: 169px;
+  display: block;
+  margin: auto;
+  margin-top: -87px;
 }
